@@ -1,0 +1,7 @@
+CREATE TABLE ORDERS (
+    id      SERIAL      PRIMARY KEY,
+    userId       INTEGER,  
+    status  VARCHAR(20),
+
+    FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
